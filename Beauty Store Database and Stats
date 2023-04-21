@@ -1,0 +1,25 @@
+--Create Beauty store database
+
+CREATE TABLE makeup (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER,price INTEGER); 
+INSERT INTO makeup VALUES (1, "foundation", 15, 8, 20);
+INSERT INTO makeup VALUES (2, "makeup_sponges", 3, 5, 15);
+INSERT INTO makeup VALUES (3, "makeup_brushes", 25, 6, 35);
+SELECT * FROM makeup;
+
+INSERT INTO makeup VALUES (4, "blushes", 12,3,24);
+
+INSERT INTO makeup VALUES (5, "bronzers", 12,3,24);
+INSERT INTO makeup VALUES (6, "setting powders", 5, 3, 32);
+INSERT INTO makeup VALUES (7, "toners", 15,2,12);
+INSERT INTO makeup VALUES (8, "primers", 12,2,15);
+INSERT INTO makeup VALUES (9, "moisturizures", 10, 2, 35);
+INSERT INTO makeup VALUES (10, "makeup_wipes", 15,8,1);
+INSERT INTO makeup VALUES (11, "setting_sprays", 6, 16, 6);
+INSERT INTO makeup VALUES (12, "exfoliating face wash", 10, 8, 5);
+INSERT INTO makeup VALUES (13, "gentle cleansers", 10, 10,3);
+INSERT INTO makeup VALUES (14, "face oils", 5,12,8);
+INSERT INTO makeup VALUES (15, "face lotion", 12, 24, 9);
+
+--Display the cost of all itmes grouped by aisle
+
+SELECT SUM (quantity) FROM makeup GROUP BY aisle
